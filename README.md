@@ -1,2 +1,2 @@
-# jeu_yochi
-creer un premier jeu
+# jeu_yoshi
+créer un premier jeu
