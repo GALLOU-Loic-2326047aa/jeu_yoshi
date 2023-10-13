@@ -89,11 +89,11 @@ if (pvj2<=0)
          default:
          cout <<"erreur mauvais caractère entré"<<endl;
      }
+
+   }
+    }
    if (pvj2<=0)
 {
    cout << "le Joueur 2 a gagné"<<endl;
    break;
-   }
-    }
-
 }
