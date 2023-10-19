@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 using namespace std;
-int main()
+int combat()
 {
     float pvj1 (150);
     float pvj2 (150);
@@ -12,7 +12,7 @@ int main()
     int attackj2 (40);
     float attack;
     float defensej1 (0);
-    float defensej2 (10);
+    float defensej2 (7);
     char (j1);
     char (j2);
     string (nomjoueur1);
@@ -23,6 +23,7 @@ int main()
    cin >> nomjoueur2;
        while(pvj1> 0 && pvj2>0)
    {
+      
     cout << '\n' << '\n' << '\n' << '\n' << '\n' << '\n' << '\n' << '\n' << '\n' << '\n' <<"Tour de "<<nomjoueur1<< '\n' << '\n';
     cout <<"stat de "<<nomjoueur1<< "  point de vie : " << pvj1 <<'\t'<<"attack "<<attackj1<< "  defense: " << 100*defensej1/(defensej1+100)<<"%" <<'\t'<< "  nombre de potion: "<<nbj1popo << endl;
     cout <<"stat de "<<nomjoueur2<< "  point de vie : " << pvj2 <<'\t'<<"attack "<<attackj2<< "  defense: " << 100*defensej2/(defensej2+100)<<"%" <<'\t'<< "  nombre de potion: "<<nbj2popo <<'\n'<< endl;
@@ -46,7 +47,7 @@ int main()
             break;
             case '3':
             cout<<"se renforcer"<<endl;
-            defensej1 = defensej1 + 15;
+            defensej1 = defensej1 + 19;
             break;
             case '4':
             attackj1 = attackj1 +5;
@@ -56,7 +57,7 @@ int main()
      }
 if (pvj2<=0)
 {
-      cout << "le Joueur 1 a gagné"<<endl;
+      cout <<nomjoueur1<<" a gagné"<<endl;
    break;}
 
 
@@ -81,7 +82,7 @@ if (pvj2<=0)
             cout << "vous avez maintenant " << pvj1 << "point de vie"<< '\n'<<endl;
             break;
             case '3':
-              defensej2 = defensej2 +15;
+              defensej2 = defensej2 +19;
             break;
             case '4':
             attackj2 = attackj2 +5;
@@ -89,11 +90,16 @@ if (pvj2<=0)
          default:
          cout <<"erreur mauvais caractère entré"<<endl;
      }
-
+   if(pvj1 < 0)
+   {
+      cout<<nomjoueur2<<" a gagné"<<endl;
    }
     }
-   if (pvj2<=0)
+
+}
+
+int main()
 {
-   cout << "le Joueur 2 a gagné"<<endl;
-   break;
+   combat();
+   cout << "bien joué"<<endl;
 }
