@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdio.h>
+#include <vector>
+#include <string>
 using namespace std;
 int combat()
 {
@@ -107,34 +109,90 @@ if (pvj2<=0)
 
 
 
+void tabequipe(std::vector<std::string> &tabstr) {
+    tabstr.resize(7);  // Redimensionne le vecteur pour qu'il ait 7 éléments
+   tabstr[0] = "0";
+    for (int i = 1; i < 6; i++) {
+        cout << "Entrez le nom du joueur " << i << ": ";
+        std::cin >> tabstr[i];
+    }
 
-int tabequipe()
-{
-   string (nomjoueur);
-   string (nomdequipe);
-   cin >> nomdequipe;
-   string equipe[7];
-   equipe[0]= "0";
-   for (int i =1;i!=6;i++)
-   {
-      cout << "entrez le nom du joueur"<<i<<endl;
-      cin >> equipe[i];
-   }
-   cout <<"entrez le numéro d'equipe";
-   cin >> equipe[7];
-
+    std::cout << "Entrez le numéro d'équipe : ";
+    std::cin >> tabstr[6];
 }
 
 
 
 
-int main()
+
+void affichetab(std::vector<std::vector<std::string> tabdetab)
 {
-   int gagnant (0);
-   gagnant=combat();
-   cout << "bien joué"<<gagnant<<endl;
+for(int i=0;i<7;i++)
+{
+   cout<<tabstr[i]<<endl;
+}
+   
+}
+
+void lesequipe()
+{
+    std::vector<std::vector<std::string>> tableauDeTableaux;
+      
+
+      std::vector<std::string> equipe1;
+    tabequipe(equipe1);
+      std::vector<std::string> equipe2;
+    tabequipe(equipe2);
+      tableauDeTableaux.push_back(equipe1);
+    tableauDeTableaux.push_back(equipe2);
+    affichetab(tableauDeTableaux);
+    /*std::vector<std::string> equipe3;
+    tabequipe(equipe3);
+    std::vector<std::string> equipe4;
+    tabequipe(equipe4);
+    std::vector<std::string> equipe5;
+    tabequipe(equipe5);
+    std::vector<std::string> equipe6;
+    tabequipe(equipe6);
+    std::vector<std::string> equipe7;
+    tabequipe(equipe7);
+    std::vector<std::string> equipe8;
+    tabequipe(equipe8);
+    std::vector<std::string> equipe9;
+    tabequipe(equipe9);
+    std::vector<std::string> equipe10;
+    tabequipe(equipe10);
+    std::vector<std::string> equipe11;
+    tabequipe(equipe11);
+    std::vector<std::string> equipe12;
+    tabequipe(equipe12);
+    std::vector<std::string> equipe13;
+    tabequipe(equipe13);
+    std::vector<std::string> equipe14;
+    tabequipe(equipe14);
+    std::vector<std::string> equipe15;
+    tabequipe(equipe15);
+    std::vector<std::string> equipe16;
+    tabequipe(equipe16);
+    std::vector<std::string> equipe17;
+    tabequipe(equipe17);
+    std::vector<std::string> equipe18;
+    tabequipe(equipe18);*/
+
+}
+
+void gagnant()
+{
+
+}
+
+int main()
+{  
+   lesequipe();
+   //int gagnant (0);
+  // gagnant=combat();
+  // cout << "bien joué"<<gagnant<<endl;
    cout <<"entrez le numéro d'equipe";
-   cin >> equipe[7];
 
 }
 
