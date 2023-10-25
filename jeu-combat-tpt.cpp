@@ -58,6 +58,7 @@ int combat()
 if (pvj2<=0)
 {
       cout <<nomjoueur1<<" a gagné"<<endl;
+      return 1 ;
    break;}
 
 
@@ -93,13 +94,47 @@ if (pvj2<=0)
    if(pvj1 < 0)
    {
       cout<<nomjoueur2<<" a gagné"<<endl;
+      return 2;
    }
     }
 
 }
 
+
+
+
+
+
+
+
+
+int tabequipe()
+{
+   string (nomjoueur);
+   string (nomdequipe);
+   cin >> nomdequipe;
+   string equipe[7];
+   equipe[0]= "0";
+   for (int i =1;i!=6;i++)
+   {
+      cout << "entrez le nom du joueur"<<i<<endl;
+      cin >> equipe[i];
+   }
+   cout <<"entrez le numéro d'equipe";
+   cin >> equipe[7];
+
+}
+
+
+
+
 int main()
 {
-   combat();
-   cout << "bien joué"<<endl;
+   int gagnant (0);
+   gagnant=combat();
+   cout << "bien joué"<<gagnant<<endl;
+   cout <<"entrez le numéro d'equipe";
+   cin >> equipe[7];
+
 }
+
