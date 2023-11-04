@@ -109,7 +109,7 @@ if (pvj2<=0)
 
 
 
-void tabequipe(std::vector<std::string> &tabstr) {
+/*void tabequipe(std::vector<std::string> &tabstr) {
     tabstr.resize(7);  // Redimensionne le vecteur pour qu'il ait 7 éléments
    tabstr[0] = "0";
     for (int i = 1; i < 6; i++) {
@@ -119,7 +119,7 @@ void tabequipe(std::vector<std::string> &tabstr) {
 
     std::cout << "Entrez le numéro d'équipe : ";
     std::cin >> tabstr[6];
-}
+}*/
 
 
 
