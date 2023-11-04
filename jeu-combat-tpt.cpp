@@ -125,7 +125,7 @@ void tabequipe(std::vector<std::string> &tabstr) {
 
 
 
-void affichetab(std::vector<std::vector<std::string> tabdetab)
+/*void affichetab(std::vector<std::vector<std::string> tabdetab)
 {
 for(int i=0;i<7;i++)
 {
@@ -146,7 +146,7 @@ void lesequipe()
       tableauDeTableaux.push_back(equipe1);
     tableauDeTableaux.push_back(equipe2);
     affichetab(tableauDeTableaux);
-    /*std::vector<std::string> equipe3;
+    std::vector<std::string> equipe3;
     tabequipe(equipe3);
     std::vector<std::string> equipe4;
     tabequipe(equipe4);
@@ -177,22 +177,19 @@ void lesequipe()
     std::vector<std::string> equipe17;
     tabequipe(equipe17);
     std::vector<std::string> equipe18;
-    tabequipe(equipe18);*/
+    tabequipe(equipe18);
 
-}
+}*/
 
-void gagnant()
-{
-
-}
 
 int main()
 {  
-   lesequipe();
+   int vainqueur;
+  // lesequipe();
    //int gagnant (0);
   // gagnant=combat();
-  // cout << "bien joué"<<gagnant<<endl;
-   cout <<"entrez le numéro d'equipe";
+   vainqueur = combat();
+   cout <<"entrez le numéro d'equipe"<<'\n'<<vainqueur<<endl;
 
 }
 
